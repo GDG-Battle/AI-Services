@@ -6,3 +6,4 @@ langgraph
 unstructured
 python-magic
 python-pptx
+langchain-qdrant
