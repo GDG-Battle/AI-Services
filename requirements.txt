@@ -1,0 +1,8 @@
+ipykernel
+python-dotenv
+langchain-core
+langchain-community
+langgraph
+unstructured
+python-magic
+python-pptx
