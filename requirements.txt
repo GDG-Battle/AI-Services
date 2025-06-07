@@ -7,3 +7,13 @@ unstructured
 python-magic
 python-pptx
 langchain-qdrant
+
+#AI assistant devpendencies
+
+# Image processing 
+pillow
+transformers
+torch
+pytesseract
+sentence-transformers
+
