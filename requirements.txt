@@ -1,20 +1,21 @@
-ipykernel
-python-dotenv
-langchain-core
-langchain-community
-langgraph
-unstructured
-python-magic
-python-pptx
-langchain-qdrant
-langchain-nvidia-ai-endpoints
+ipykernel                # Jupyter/IPython kernel support
+python-dotenv            # Load environment variables from .env files
+langchain-core           # Core components for building language model applications
+langchain-community      # Community-contributed integrations for LangChain
+langgraph                # Framework for building language model workflows/graphs
+unstructured             # Parsing and processing unstructured documents
+python-magic             # File type identification using libmagic
+python-pptx              # Read/write PowerPoint (.pptx) files
+langchain-qdrant         # Qdrant vector database integration for LangChain
+langchain-nvidia-ai-endpoints # NVIDIA AI endpoints integration for LangChain
 
-#AI assistant devpendencies
+# AI assistant dependencies
 
 # Image processing 
-pillow
-transformers
-torch
-pytesseract
-sentence-transformers
+pillow                   # Image processing and manipulation
+transformers             # Pretrained models for NLP and vision tasks (e.g., image captioning)
+torch                    # PyTorch deep learning framework
+pytesseract              # Optical Character Recognition (OCR) using Tesseract
 
+# Embeddings
+sentence-transformers    # Sentence embeddings for semantic search and similarity

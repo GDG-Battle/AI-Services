@@ -1,9 +1,6 @@
 import os
 from typing import List
 from PIL import Image
-import pytesseract
-from transformers import BlipProcessor, BlipForConditionalGeneration
-import torch
 
 from src.utils.ocr import extract_text_from_image
 from src.utils.image_captioning import generate_caption
