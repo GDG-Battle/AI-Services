@@ -1,1 +1,0 @@
-# here were all the logic functions for the main app

@@ -1,1 +1,0 @@
-# here where all the endpoints are written
