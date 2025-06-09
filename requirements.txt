@@ -9,6 +9,7 @@ python-pptx              # Read/write PowerPoint (.pptx) files
 langchain-qdrant         # Qdrant vector database integration for LangChain
 langchain-nvidia-ai-endpoints # NVIDIA AI endpoints integration for LangChain
 langchain-sandbox        # Sandbox environment for LangChain applications to run code safely
+nest_asyncio
 
 # AI assistant dependencies
 
