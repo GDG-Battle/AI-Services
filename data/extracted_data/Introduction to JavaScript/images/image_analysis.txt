@@ -1,0 +1,726 @@
+[PPTX Slide 1, Image 1]
+[OCR]: 
+[Caption]: a diagram of a football field with a player and a player
+
+--------------------------------------------------
+[PPTX Slide 1, Image 3]
+[OCR]: 
+[Caption]: a yellow background with the word js
+
+--------------------------------------------------
+[PPTX Slide 1, Image 4]
+[OCR]: <2
+
+Google Developer Groups
+On Campus « ENSET Mohammedia
+[Caption]: google developer groups on campus
+
+--------------------------------------------------
+[PPTX Slide 2, Image 2]
+[OCR]: 
+[Caption]: a line drawing of a man with a beard
+
+--------------------------------------------------
+[PPTX Slide 2, Image 8]
+[OCR]: 
+[Caption]: a man sitting on a couch with his feet up
+
+--------------------------------------------------
+[PPTX Slide 6, Image 2]
+[OCR]: var age = 21;
+
+function init() {
+
+var name = “Mozilla”;
+Lexical
+function displayName() { Scope
+console. log(name) ;
+console. log(age) 5 Scope
+
+3
+
+displayName();
+
++
+
+init()5
+
+Lexical Environement
+[Caption]: a black background with a red and green line
+
+--------------------------------------------------
+[PPTX Slide 7, Image 3]
+[OCR]: var name = ‘John's
+
+function first() {
+var a= ‘Hello!';
+second() ;
+
+}
+
+function second() {
+var b = ‘Hal's
+thirds
+var z= b + name;
+
+?
+
+function third() {
+
+var z
+?
+first();
+
+Execution Context
+third()
+
+Execution Context
+
+second()
+
+Execution Context
+first()
+
+EXECUTION STACK
+[Caption]: the diagram of the xml and xml xml xml xml xml xml xml xml xml xml xml xml xml xml
+
+--------------------------------------------------
+[PPTX Slide 8, Image 3]
+[OCR]: PROPERTY VALUE
+
+const object = { a
+hello: ‘world'
+
+4
+
+PROPERTY NAME (KEY)
+[Caption]: a black background with a colorful text that reads property value
+
+--------------------------------------------------
+[PPTX Slide 10, Image 1]
+[OCR]: Using variable before declaration
+
+Javascript
+
+That feels weird, but I'll allow it
+[Caption]: a man in a black jacket and a red jacket with the words ' using variable declarations '
+
+--------------------------------------------------
+[PPTX Slide 11, Image 1]
+[OCR]: :
+[Caption]: a cartoon balloon with the letter j and the letter j
+
+--------------------------------------------------
+[PPTX Slide 12, Image 1]
+[OCR]: When using “var”
+
+Creation Phase
+
+¢ declared variable “name”
+¢ initialized variable “name”
+
+Execution Phase
+
+¢ Assigned variable “name”
+with it’s actual value
+
+When using “let”
+
+Creation Phase
+
+¢ declared variable “name”
+
+Execution Phase
+
+¢ initialized variable “name”
+
+¢ Assigned variable “name”
+with it’s actual value
+[Caption]: a diagram showing the different types of the different variables
+
+--------------------------------------------------
+[PPTX Slide 14, Image 1]
+[OCR]: Single Threaded Execution
+
+5 seconds 5 seconds 5 seconds 5 seconds
+
+es
+
+Total Time Taken: 20 seconds
+[Caption]: a line with the words ' single - headed execution ' and ' task - based tasks '
+
+--------------------------------------------------
+[PPTX Slide 15, Image 1]
+[OCR]: interface
+/Browserengine
+7 —_)
+Network ED
+
+DATA
+[Caption]: the difference between the sun and the sun
+
+--------------------------------------------------
+[PPTX Slide 16, Image 1]
+[OCR]: Low Priority
+
+1
+High Priority T Callback Queue Lowest Priority
+1
+, onclick onclick onclick
+1
+1 sa
+I Priority Queue Highest Priority
+' WebAPIs ©
+Promise 1 Promise 2 Promise 3
+setTimeout
+
+£ Event Loop POM
+
+SS fetch
+[Caption]: a diagram showing the different types of the web
+
+--------------------------------------------------
+[PPTX Slide 18, Image 5]
+[OCR]: 
+[Caption]: tss logo
+
+--------------------------------------------------
+[PPTX Slide 19, Image 7]
+[OCR]: 
+[Caption]: node logo
+
+--------------------------------------------------
+[PPTX Slide 20, Image 1]
+[OCR]: r ¥ER
+i \ t
+= uF Hie _—
+makeameme.org
+[Caption]: a little girl sitting in a car seat
+
+--------------------------------------------------
+[PPTX Slide 22, Image 2]
+[OCR]: Feature
+DOM
+
+Access
+Modules
+File System
+
+Networking
+
+APIs
+
+Nodejs
+
+No DOM, window, or document
+Uses CommonJs ( require ) and
+ES Modules ( import )
+
+Can access local files ( fs module)
+
+Can create servers (http module)
+
+Uses built-in Node.js APIs (e.g.,
+fs, path, http)
+
+Browser @
+Has DOM, window, document
+
+Uses only ES Modules ( import )
+
+Cannot access local files due to
+security restrictions
+
+Can make requests but cannot
+create servers
+
+Uses Web APIs (e.g., fetch,
+document , localstorage )
+[Caption]: a table with a list of different types of the text
+
+--------------------------------------------------
+[PPTX Slide 24, Image 8]
+[OCR]: ~/Desktop (0.1825)
+node -v
+
+v22.14.0
+
+~/Desktop (0.156)
+npm -v
+11.2.0
+[Caption]: the screenshote display shows the time and date of the device
+
+--------------------------------------------------
+[PPTX Slide 24, Image 9]
+[OCR]: ~/Desktop (0.0495)
+cat index. js
+
+console. log( "Hello, World!");
+
+~/Desktop (0.0755)
+node index. js
+
+Hello, World!
+[Caption]: a screenshot of a dark blue background with a green and yellow text
+
+--------------------------------------------------
+[PPTX Slide 26, Image 5]
+[OCR]: 
+[Caption]: the logo for the new website
+
+--------------------------------------------------
+[PPTX Slide 27, Image 2]
+[OCR]: Sun Neutronstar Blackhole node_modules
+
+SH
+
+HEAVIEST
+OBJECTS IN THE
+UNIVERSE
+[Caption]: the diagram shows the location of the sun and the location of the solar
+
+--------------------------------------------------
+[PPTX Slide 27, Image 3]
+[OCR]: 
+[Caption]: the logo for the mpm
+
+--------------------------------------------------
+[PPTX Slide 30, Image 3]
+[OCR]: uy. w
+NODE IS. GOOD!
+
+ BUTIT a! BETTER...
+[Caption]: a man pointing at the camera with a capt that says not go but i could ' t out better
+
+--------------------------------------------------
+[PPTX Slide 31, Image 3]
+[OCR]: 
+[Caption]: a black background with a white and red flower
+
+--------------------------------------------------
+[PPTX Slide 31, Image 4]
+[OCR]: 
+[Caption]: a cartoon face with a pink nose and a white hair
+
+--------------------------------------------------
+[PPTX Slide 32, Image 2]
+[OCR]: Attribute
+Release Year
+
+Implementation
+Language
+
+Module System
+
+Security
+
+Package
+Management
+
+Nodejs
+2009
+
+C++ and JavaScript
+
+Primarily
+CommonJs (adds
+ES Modules support)
+
+No secure sandbox
+by default
+
+Managed via npm,
+yarn, or pnpm.
+
+Deno
+2020
+Rust
+
+ES Modules by default
+
+Secure by default ~
+permissions must be
+explicitly granted
+
+Imports modules
+directly from URLs (and
+the Deno Registry)
+
+Bun
+2022
+Zig
+
+ES Modules by default
+
+Evolving security
+model; balancing
+performance and safety
+
+Built-in package
+
+manager (e.g., bun
+install)
+[Caption]: the table of the different types of the internet
+
+--------------------------------------------------
+[PPTX Slide 33, Image 3]
+[OCR]: nede 4)
+
+Hello World
+Performance
+[Caption]: the logo for the new website
+
+--------------------------------------------------
+[PPTX Slide 34, Image 2]
+[OCR]: brahim_eLhoube@BRAHIM-PC MINGW64 ~/OneDrive/Desktop/hello_rust (main)
+e $ cargo run
+Compiling hello_ rust v0.1.0 (C Users\hp\OneDrive\Desktop\hello_i pee)
+Finished Pp. IL fo]
+Running ~target\debug\hello_rust.exe~
+Hello, world!
+[Caption]: a black background with a green and blue text
+
+--------------------------------------------------
+[PPTX Slide 35, Image 3]
+[OCR]: error[E0384]: cannot assign twice to immutable variable ~x”
+--> src/main.rs:5:5
+
+|
+21 let x = 5;
+I - first assignment to “x”
+
+5 x = 10;
+
+|
+| AAA“ cannot assign twice to immutable variable
+l
+
+help: consider making this binding mutable
+
+|
+21 let mut x = 5;
+| +e
+[Caption]: a black background with a red and blue code
+
+--------------------------------------------------
+[PPTX Slide 36, Image 1]
+[OCR]: 
+[Caption]: rule 1 don to touch my face - sticker
+
+--------------------------------------------------
+[PPTX Slide 37, Image 3]
+[OCR]: warning: ~hello_rust~ (bin "hello_rust") generated 2 warnings
+
+Running ~target\debug\hello_
+The value of x is: 10
+[Caption]: a black background with a green and yellow text
+
+--------------------------------------------------
+[PPTX Slide 39, Image 2]
+[OCR]: nits} us
+
+i116 ul6
+132 u32
+164 uéu4
+1128 ul128
+isizeusize * \/
+) F £64 \
+£32 J
+th ‘ &
+N
+a
+«
+5
+wh _—a
+Integer? Float? There are 14)built-in types for hide and if you want
+
+- i 2 your function to accept morejthan one type as valid
+Don't worry, just give me the ’ input, you canjeitherjtry to}figure out|how traits work, or
+ajsuapinthe
+
+ou\can in\}the'flames of hell,
+number and I’Il do the math. ith isfequally,painful.
+[Caption]: a man with a beard and a bit bit bit bit bit bit bit bit bit bit bit bit bit
+
+--------------------------------------------------
+[PPTX Slide 41, Image 11]
+[OCR]: Low address
+
+Unitialize data
+
+Initialized data
+
+text
+[Caption]: a diagram showing the different types of the data
+
+--------------------------------------------------
+[PPTX Slide 42, Image 2]
+[OCR]: 
+[Caption]: a computer screen with a bar chart and a bar chart
+
+--------------------------------------------------
+[PPTX Slide 44, Image 6]
+[OCR]: 
+[Caption]: a red crab with a big smile
+
+--------------------------------------------------
+[PPTX Slide 46, Image 1]
+[OCR]: Root References
+
+Step 1: Mark|
+
+Garbage Collector
+
+Mark Phase _ Compact Phase Sweep Phase
+
+7 |
+
+raverse Object Graph Step 3: Defragment im|identify Unusedfmstep 2: Free Memory)
+
+« — re «
+
+Active Objects Unreachable Objects
+[Caption]: a diagram showing the different stages of the process
+
+--------------------------------------------------
+[PPTX Slide 48, Image 3]
+[OCR]: 
+[Caption]: a diagram showing the different stages of the process
+
+--------------------------------------------------
+[PPTX Slide 48, Image 4]
+[OCR]: High Address
+
+Low Address
+[Caption]: a diagram showing the different types of the data
+
+--------------------------------------------------
+[PPTX Slide 49, Image 1]
+[OCR]: Program Operating System Memory
+
+Stack memory is automatically managed
+
+Program can now use the allocated memory
+
+When memory is no longer needed
+
+lemory becomes available for reu:
+
+Program Operating System Memory
+[Caption]: a block diagram showing the memory memory memory memory memory memory memory memory memory memory memory memory memory memory memory
+
+--------------------------------------------------
+[PPTX Slide 50, Image 2]
+[OCR]: fn main()
+
+‘Soopect
+innee_vor println!("inner_var = {}"
+
+printin! (“outer_var = {}"
+
+println!("outer_var inside inner block = {}"
+
+Seopeot
+outer var
+verieble
+[Caption]: a black background with a blue border and a green border
+
+--------------------------------------------------
+[PPTX Slide 51, Image 3]
+[OCR]: brahim_eLhoube@BRAHIM-PC MSYS ~/OneDrive/Desktop/hello_rust (main)
+® $ cargo run
+Compiling hello_rust v@.1.@ (C:\Users\hp\OneDrive\Desktop\hello_rust)
+error[E0425]: cannot find value ~s~ in this scope
+--> src/main.rs:7:20
+
+|
+71 printin!("{}", s);
+i] “not found in this scope
+
+For more information about this error, try “rustc --explain E0425>.
+
+error: could not compile “hello_rust~ (bin "hello_rust") due to 1 previous error
+a
+[Caption]: a black screen with a red and blue text
+
+--------------------------------------------------
+[PPTX Slide 52, Image 3]
+[OCR]: sl
+
+name |value
+
+ptr
+
+len
+
+capacity
+[Caption]: a diagram of a table with a number of rows
+
+--------------------------------------------------
+[PPTX Slide 53, Image 3]
+[OCR]: sl
+| pr | |
+[Caption]: a diagram of a node node node node node node node node node node node node node node node node
+
+--------------------------------------------------
+[PPTX Slide 54, Image 3]
+[OCR]: error[ E0382]: borrow of moved value: ~s1~
+--> src/main.rs:5:15
+
+“*e* value borrowed here after move
+
+21 let s1 = String::from("hello");
+i] -- move occurs because ~s1° has type “String~, which does not implement the “Copy” trait
+31 let s2 = sl;
+| -- value moved here
+4]
+51 println!("{s1}, world!"); // Ooops!
+|
+|
+[Caption]: a black background with a red and blue text
+
+--------------------------------------------------
+[PPTX Slide 55, Image 1]
+[OCR]: Stack
+
+Name Value
+
+Pointer Heap
+S1
+ll | & Index Value
+Capacity 5 0 h
+1 e
+Name | Value 2 |
+Pointer 3 |
+S2
+Length 5 4 (e)
+
+Capacity 5
+[Caption]: stack name value value value value value value value value value value value value value value value value value value
+
+--------------------------------------------------
+[PPTX Slide 57, Image 2]
+[OCR]: sl
+name |value
+
+index} value
+[Caption]: a diagram showing the same value value value value value value value value value value value value value value value
+
+--------------------------------------------------
+[PPTX Slide 60, Image 3]
+[OCR]: brahim_eLhoube@BRAHIM-PC MSYS ~/OneDrive/Desktop/hello_rust (main)
+e $ cargo run
+Compiling hello_ rust v0.1.0 (C: ‘\Users\hp\OneDrive\Desktop\hello_1 ne)
+Finished ~
+Running ~target\debug\hello_rust.exe~
+sl = hello, s2 = hello
+[Caption]: a black screen with a green and blue text
+
+--------------------------------------------------
+[PPTX Slide 61, Image 2]
+[OCR]: sl
+Te |
+
+po | h
+pi fe |
+| 4 [oT
+
+Po | 4 |
+Pre
+aT
+
+s2
+Tee |
+[Caption]: the same array of the same array
+
+--------------------------------------------------
+[PPTX Slide 63, Image 2]
+[OCR]: 
+[Caption]: a block diagram with a block diagram
+
+--------------------------------------------------
+[PPTX Slide 66, Image 3]
+[OCR]: True
+
+False
+
+Body of if
+
+Body of else
+[Caption]: a flow diagram for a flow flow diagram
+
+--------------------------------------------------
+[PPTX Slide 68, Image 3]
+[OCR]: 
+[Caption]: a flow diagram for a system
+
+--------------------------------------------------
+[PPTX Slide 75, Image 7]
+[OCR]: Input x
+
+FUNCTION F:
+
+Outeut f(x)
+[Caption]: function function function function function function function function function function function function function function function function function function function function
+
+--------------------------------------------------
+[PPTX Slide 81, Image 4]
+[OCR]: ha
+
+ZB
+=
+
+wee
+[Caption]: a drawing of a sign with the words function function
+
+--------------------------------------------------
+[PPTX Slide 84, Image 7]
+[OCR]: 
+[Caption]: the four colors of the four different shapes
+
+--------------------------------------------------
+[PPTX Slide 85, Image 1]
+[OCR]: brahim_eLhoube@BRAHIM-PC MINGW64 ~/OneDrive/Desktop/hello_rust (main)
+e $ cargo run
+Compiling hello_ rust v0.1.0 (ee \Users\hp\OneDrive\Desktop\hello_ rust)
+debuginfo] target(s) in 1.55s
+
+Running ~target\debug\hello_rust.exe
+Welcome to the Command-Line Calculator!
+Please enter the first number:
+
+10
+
+Please enter the operation (+, -, *, /):
++
+
+Please enter the second number:
+
+2
+
+The result of 10 + 2 is: 12
+
+Goodbye!
+[Caption]: a black background with a green and red text
+
+--------------------------------------------------
+[PPTX Slide 87, Image 45]
+[OCR]: 
+[Caption]: a man wearing a black shirt
+
+--------------------------------------------------
+[PPTX Slide 87, Image 90]
+[OCR]: 
+[Caption]: a man wearing glasses and a white shirt
+
+--------------------------------------------------
+[PPTX Slide 87, Image 93]
+[OCR]: 
+[Caption]: a cartoon character with a big smile
+
+--------------------------------------------------
+[PPTX Slide 87, Image 96]
+[OCR]: 
+[Caption]: a red and black object with a black handle
+
+--------------------------------------------------

@@ -1,0 +1,60 @@
+[PPTX Slide 1]
+[PPTX Slide 2]
+Introduction
+The Voice Privacy Challenge aims to anonymize speech while preserving intelligibility. Existing approaches include deep learning-based voice conversion and speaker embedding modification, but deep learning incurs a penalty.
+We implemented a signal processing-based approach, modifying acoustic features like pitch, formants, and spectral properties to anonymize speaker identity while keeping speech clear.
+Introduction
+Architecture
+Technique used
+Results exposed
+[PPTX Slide 3]
+Architecture
+Introduction
+Architecture
+Input sound
+Output sound
+Technique used
+Results exposed
+[PPTX Slide 4]
+Introduction
+Architecture
+WSOLA (Waveform Similarity Overlap and Add)
+Bandpass Filtering & Frequency Warping
+Changes speaking rate without pitch modification
+Formant Shifting
+Time-Strech
+Technique
+used
+Simulate a Different Vocal Tract
+Speaking Rate Estimation
+Resampling (Time Stretching)
+Energy-Based Peak Detection
+Technique used
+Results exposed
+[PPTX Slide 5]
+Technique
+Introduction
+Architecture
+Speaking Rate Modification
+Exchanging Formant Bands
+used
+Alter Speaking Rate and F0
+Replacing High Frequencies with Noise
+Hilbert Transform + Phase Adjustment
+Bandpass Filtering + Frequency Band Swapping
+Technique used
+Results exposed
+Pink Noise Synthesis
+[PPTX Slide 6]
+Results  exposed
+Introduction
+Architecture
+Technique used
+Results exposed
+WER: 0.23
+EER:  0.30
+Dataset with noise
+Dataset without noise
+WER: 0.13
+EER: 0.25
+[PPTX Slide 7]

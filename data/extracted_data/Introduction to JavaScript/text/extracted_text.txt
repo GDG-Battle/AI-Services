@@ -1,0 +1,277 @@
+[PPTX Slide 1]
+Introduction to JavaScript
+[PPTX Slide 2]
+On The Menu
+[PPTX Slide 3]
+What To Expect ?
+the core mechanisms of JavaScript
+It is not about basic syntax
+We will explore what makes JavaScript unique and how it works under the hood
+[PPTX Slide 4]
+What Is javascript ?
+Created in 1995 By Brendan Eich at Netscape
+Original Name: Mocha
+Add interactivity to static web pages
+1997: Standardized as ECMAScript
+2009: Node.js brought JS to servers
+Today: Runs everywhere—browsers, phones, even robots!
+[PPTX Slide 5]
+important concepts to know
+[PPTX Slide 6]
+Lexical environment
+Where your code lives and tracks variables.
+
+Based on where code is written (not run).
+
+Every function has its own lexical environment.
+[PPTX Slide 7]
+Execution Context
+The environment where JS code runs.
+
+Manages variables, this, and scope during execution.
+
+Every time code runs, an execution context is created.
+
+Ties to the lexical environment being executed.
+
+Global Execution Context: The base—sets up window/global and this.
+[PPTX Slide 8]
+Objects
+Collections of key-value pairs.
+
+Store data and behavior together.
+
+Arrays, functions, even null’s wrapper , all objects under the hood!
+
+[[Call]] Enables (), i.e  function call Only function objects 
+
+[[Prototype]] Inheritance lookup chain All objects
+[PPTX Slide 9]
+hoisting
+[PPTX Slide 10]
+[PPTX Slide 11]
+[PPTX Slide 12]
+[PPTX Slide 13]
+single execution thread
+[PPTX Slide 14]
+[PPTX Slide 15]
+[PPTX Slide 16]
+[PPTX Slide 17]
+some other stuff
+[PPTX Slide 18]
+What Is TypeScript ?
+Created by Microsoft in 2012.
+A superset of JavaScript.
+Adds static typing to JS.
+Catch errors before runtime.
+Compiles to plain JS.
+[PPTX Slide 19]
+Node.js: Run JavaScript Everywhere
+[PPTX Slide 20]
+[PPTX Slide 21]
+What Is Node.js ?
+Created by Ryan Dahl in 2009
+A JavaScript runtime that allows JS to run outside the browser
+Built on Chrome’s V8 engine
+Used for server-side applications, APIs, and more
+[PPTX Slide 22]
+Differences Between Node.js and the Browser
+[PPTX Slide 23]
+Laboratory Setup
+[PPTX Slide 24]
+How to Install Node.js
+What’s installed?
+node: Node.js Runtime
+npm: Node Package Manager
+[PPTX Slide 25]
+Mini Project
+[PPTX Slide 26]
+Let’s Build a Simple Web Server with Node.js
+We will create a basic web server that responds with "Hello, World!" when accessed.
+Concepts Covered:
+Setting up a Node.js project
+Using the built-in http module
+Handling basic HTTP requests
+[PPTX Slide 27]
+NPM: Node Package Manager
+[PPTX Slide 28]
+What Is NPM ?
+A package manager for JavaScript
+Used to install, manage, and share JS libraries and tools
+Hosts the world’s largest software registry
+Uses package.json to track project dependencies
+[PPTX Slide 29]
+Let’s Get Our Hands Dirty!
+[PPTX Slide 30]
+[PPTX Slide 31]
+[PPTX Slide 32]
+Differences Between Node.js, Deno and Bun
+[PPTX Slide 33]
+Performance comparison
+We will create a basic web server that responds with "Hello, World!" when accessed.
+[PPTX Slide 34]
+source code
+run compiler
+execute binaries
+[PPTX Slide 35]
+Variables & Immutability
+[PPTX Slide 36]
+Variables & Immutability
+By default variable in Rust are immutable, that means once a value is bound to a name, it can’t be changed.
+Immutability Promotes Safety
+Facilitates Predictable Code
+Supports Rust’s Ownership Model
+[PPTX Slide 37]
+Variables & Immutability
+[PPTX Slide 38]
+Variables & Immutability
+It’s not allowed to use mut with constants
+Constants can be declared in any scope
+Constants must be assigned a value known at compile-time
+[PPTX Slide 39]
+Data Types
+[PPTX Slide 40]
+Data Types
+Rust is a statically typed language, which means that it must know the types of all variables at compile time.
+[PPTX Slide 41]
+Data Types: Scalar Types
+A scalar type represents a single value. Rust has four primary scalar types:
+Integers: i32, i64, u8, u32 …
+Floating-point: f32, f64
+Booleans: true / false
+Characters: unicode scalar value
+[PPTX Slide 42]
+Data Types: Scalar Types
+[PPTX Slide 43]
+Data Types: Compound Types
+Compound types can group multiple values into one type. Rust has two primitive compound types:
+Types
+Tuples
+Arrays
+[PPTX Slide 44]
+Ownership and Borrowing
+[PPTX Slide 45]
+Ownership System
+Ownership is a set of rules that govern how a Rust program manages memory.
+Garbage Collection
+regularly looks for no longer used memory as the program runs
+Manual Memory Management
+the programmer must explicitly allocate and free the memory.
+[PPTX Slide 46]
+[PPTX Slide 47]
+Ownership System: The Rules
+Rust uses a third approach: memory is managed through a system of ownership with a set of rules that the compiler checks.
+Each value in Rust has an owner
+There can only be one owner at a time
+When the owner goes out of scope, the value will be dropped
+[PPTX Slide 48]
+Ownership System: Memory Allocation
+The process of reserving space in a computer's memory to store data during a program's execution.
+[PPTX Slide 49]
+[PPTX Slide 50]
+Ownership System: Variable Scope
+[PPTX Slide 51]
+Ownership System: Variable Scope
+[PPTX Slide 52]
+Ownership System: Memory Allocation
+stack
+heap
+[PPTX Slide 53]
+Ownership System: Moving Ownership
+[PPTX Slide 54]
+Ownership System: Moving Ownership
+[PPTX Slide 55]
+[PPTX Slide 56]
+Ownership System: Double Free Error
+[PPTX Slide 57]
+Ownership System: Double Free Error
+[PPTX Slide 58]
+Ownership System: Why the Complexity?
+Clear Responsibility: Rust ensures there’s always one clear owner of heap memory, avoiding issues like double-free errors or dangling pointers.
+Compile-Time Guarantees: The compiler needs to track ownership to enforce memory safety and ensure no invalid access occurs.
+Explicit Intent: You, the developer, must decide whether to move, borrow, or copy data. This avoids unintentional performance or safety issues.
+[PPTX Slide 59]
+References and Borrowing
+What if I want to assign multiple owners to my values?
+Copy Your Data
+You can duplicate the data to create independent owners.
+Use References
+Borrowing allows multiple parts of your program to access a value without owning it.
+[PPTX Slide 60]
+Data Interacting with Clone
+[PPTX Slide 61]
+Data Interacting with Clone
+[PPTX Slide 62]
+References and Borrowing
+References are a way to allow multiple parts of a program to access and interact with the same piece of data without transferring ownership.
+[PPTX Slide 63]
+References and Borrowing
+[PPTX Slide 64]
+References and Borrowing: The Rules
+Borrowing allows a value to be accessed without transferring ownership. This enables multiple parts of a program to safely use the same data according to this rules:
+At any time, you can have one mutable reference or any number of immutable references, but not both.
+References must always be valid.
+[PPTX Slide 65]
+Control Flow in Rust
+[PPTX Slide 66]
+The if Expression
+An if expression allows you to branch your code depending on conditions
+[PPTX Slide 67]
+The if Expression
+[PPTX Slide 68]
+Pattern Matching With match
+match allows us to compare a value against a series of patterns and then execute code based on which pattern matches
+[PPTX Slide 69]
+Pattern Matching With match
+[PPTX Slide 70]
+Repeating Code With loop
+The loop keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop.
+[PPTX Slide 71]
+Repeating Code With loop
+We might need to pass some result out of the loop to the rest of our code.
+[PPTX Slide 72]
+Repeating Code With while
+A program will often need to evaluate a condition within a loop. While the condition is true, the loop runs. When the condition ceases to be true, the program calls break, stopping the loop
+[PPTX Slide 73]
+Repeating Code With for
+We can use a for loop and execute some code for each item in a collection.
+[PPTX Slide 74]
+Functions
+[PPTX Slide 75]
+Functions
+A function is a reusable block of code that performs a specific task. Functions are the building blocks of organized, modular programs.
+Reduce repetition and increase code clarity
+Make programs easier to debug and maintain
+[PPTX Slide 76]
+[PPTX Slide 77]
+[PPTX Slide 78]
+[PPTX Slide 79]
+[PPTX Slide 80]
+[PPTX Slide 81]
+Parameters
+Rust functions can have parameters, which are used to pass values into the function.
+[PPTX Slide 82]
+Return values
+Functions can return values to the code that calls them. In Rust, we must declare the type of the return value after an arrow ”->”.
+[PPTX Slide 83]
+Mini Project
+[PPTX Slide 84]
+Let’s Build a Command-Line Calculator
+The calculator will support basic arithmetic operations: addition, subtraction, multiplication, and division.
+Apply the core concepts learned so far
+Build a simple yet functional application to practice coding in Rust
+[PPTX Slide 85]
+[PPTX Slide 86]
+Let’s Get Our Hands Dirty!
+[PPTX Slide 87]
+Ahmed Houssam BOUZINE
+Big Data & Cloud Computing 
+Student @ENSET
+@assadon_
+www.ahmedhoussambouzine.com
+Brahim ELHOUBE
+Big Data & Cloud Computing 
+Student @ENSET
+@brahim_elhoube
+www.brahimelhoube.com
+Thank you!

@@ -19,5 +19,12 @@ transformers             # Pretrained models for NLP and vision tasks (e.g., ima
 torch                    # PyTorch deep learning framework
 pytesseract              # Optical Character Recognition (OCR) using Tesseract
 
+#Document processing
+python-pptx
+python-docx
+PyMuPDF
+pdfplumber
+docx2txt
+
 # Embeddings
 sentence-transformers    # Sentence embeddings for semantic search and similarity

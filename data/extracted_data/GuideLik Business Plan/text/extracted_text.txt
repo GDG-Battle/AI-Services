@@ -1,0 +1,78 @@
+Rapport de Business Plan
+TourLik
+Etudiants:								Professeur:
+AZMI Zakaria		      II-BDCC				   M. NASSEF
+BENHIMA Mohamed-amine   II-BDCC
+EL GHAZOUANI Hamza        GLSID
+Annee universitaire: 2024-2025
+Sommaire:
+Résumé Exécutif
+Le problème
+Le problème est que les touristes manquent souvent d’informations sur les trajets, les prix de transport, et les comportements culturels locaux. En parallèle, les guides touristiques cherchent à augmenter leurs revenus et à attirer davantage de clients internationaux.
+Exemple :
+Un touriste qui veut visiter le Maroc ne connaît pas les itinéraires locaux, les coûts de transport, ni les coutumes culturelles. Il est donc perdu pour organiser son voyage de façon optimale. En même temps, un guide marocain aimerait toucher plus de voyageurs internationaux, mais il a du mal à se faire connaître en dehors de sa région.
+La plateforme comblerait ce manque en permettant au touriste de planifier un voyage adapté et au guide de trouver de nouveaux clients.
+La Solution
+TourLik
+Plateforme de Conseil en Tourisme
+TourLik est une plateforme en ligne où les voyageurs peuvent obtenir des consultations personnalisées pour planifier leurs trajets, gérer leurs budgets et découvrir les meilleurs lieux à visiter. Des guides professionnels y proposent leurs services, offrant des conseils sur mesure selon les besoins des touristes, que ce soit pour des itinéraires détaillés, des recommandations de sites à ne pas manquer ou des astuces pour optimiser les dépenses. L’objectif est de faciliter la planification de voyages et de mettre en relation les voyageurs avec des experts locaux.
+Notre objectif
+Faciliter et enrichir l’expérience de voyage pour les touristes étrangers en leur offrant un accompagnement personnalisé et en les connectant avec des guides locaux qualifiés. GuideLik aide les voyageurs à optimiser leurs itinéraires, gérer leurs budgets et découvrir les incontournables tout en respectant la culture locale. En parallèle, la plateforme permet aux guides touristiques d’augmenter leur visibilité et d’attirer davantage de clients internationaux, créant ainsi des opportunités pour les deux parties.
+2. Présentation de l'Entreprise
+Modèle économique
+L'idée serait de prélever un pourcentage sur les revenus que les guides génèrent grâce aux réservations effectuées via la plateforme. Ce modèle permettrait aux guides d'accéder à plus de clients, tandis que la plateforme bénéficierait d'une commission sur chaque consultation ou service vendu, créant une situation gagnant-gagnant.
+Membre de l’équipe
+AZMI Zakaria:			 BDCC 2
+BENHIMA Mohamed-amine:   BDCC 2
+EL GHAZOUANI Hamza: 	 GLSID 2
+3. Analyse du Marché
+La cible
+Notre cible principale comprend :
+Les voyageurs internationaux : touristes de tous âges, principalement des millennials et des générations Z et Y, à la recherche d’expériences authentiques et personnalisées pour optimiser leurs séjours.
+Les guides touristiques locaux : professionnels indépendants ou affiliés à des agences cherchant à attirer davantage de clients internationaux.
+Le marché (Statistiques)
+Nous évoluons dans le marché des services de conseil en tourisme et de la mise en relation voyageurs-guides. Ce marché s’inscrit dans le secteur plus large du tourisme numérique (digital travel services), qui connaît une forte croissance avec la montée de la personnalisation des voyages. En 2023,le Maroc a accueilli 14,5 millions de visiteurs, marquant une augmentation significative de 34% par rapport à l’année précédente ansi que  la taille du marché mondial du tourisme virtuel était estimée à 6,49 milliards USD et devrait croître à un TCAC de 24,9 % entre 2024 et 2030, montrant que le tourisme virtuel, autrefois considéré comme futuriste, devient rapidement une réalité grâce aux avancées technologiques et à la demande du marché (source : grandviewresearch.com).
+Analyse de la Concurrence
+Un concurrent majeur dans notre secteur est Evaneos, qui se concentre principalement sur la mise en relation des voyageurs avec des agences de voyages sélectionnées en Europe. Cependant, ce qui nous distingue est notre approche ciblée sur le marché marocain, suivi par une expansion vers d'autres marchés africains. Contrairement à Evaneos, qui privilégie les agences de voyages, nous nous engageons à collaborer non seulement avec des agences, mais aussi avec des guides touristiques professionnels locaux. Cette stratégie nous permet d’offrir une expérience plus personnalisée et authentique aux voyageurs, en les connectant directement avec des experts locaux qui connaissent parfaitement les spécificités culturelles et les meilleures pratiques pour optimiser leur séjour.
+4. Les 4P
+Produit :
+Une plateforme en ligne offrant des consultations touristiques personnalisées avec des guides locaux.
+Services : Conseils d’itinéraire, gestion de budget, recommandations culturelles, et réservations de visites avec des guides professionnels.
+Prix :
+Commission sur chaque réservation effectuée via la plateforme.
+Possibilité de tarification variable en fonction des services (consultation de base, consultation premium avec itinéraire détaillé, etc.).
+Place :
+Accessible via une plateforme web et une application mobile.
+Positionnement sur le marché marocain en premier lieu, avec une expansion future vers d'autres marchés africains.
+Promotion :
+Campagnes digitales sur les réseaux sociaux pour attirer les jeunes voyageurs (Instagram, Facebook, TikTok).
+Partenariats avec agences de voyages et influenceurs du voyage.
+Programmes de parrainage pour attirer de nouveaux utilisateurs via le bouche-à-oreille.
+5. Analyse SWOT
+Forces :
+Accès direct aux experts locaux pour des expériences authentiques.
+Positionnement unique sur le marché marocain, avec des connaissances culturelles locales.
+Faiblesses :
+Dépendance aux guides pour garantir la qualité des services.
+Besoin de générer une masse critique de guides et d’utilisateurs.
+Opportunités :
+Croissance du tourisme numérique et de la demande pour des expériences personnalisées.
+Expansion potentielle dans d’autres régions touristiques d'Afrique.
+Menaces :
+Concurrence d’acteurs internationaux comme Evaneos.
+Fluctuations économiques pouvant influencer les flux touristiques.
+6. Stratégies Marketing
+Marketing Digital et Réseaux Sociaux :
+Utiliser le SEO et des publicités ciblées pour attirer les voyageurs recherchant des services en ligne de voyage personnalisé.
+Collaborer avec des influenceurs locaux et internationaux pour promouvoir des circuits exclusifs avec GuideLik.
+Programmes de Fidélité et Parrainage :
+Offrir des réductions ou des crédits pour les clients existants qui recommandent de nouveaux utilisateurs.
+Proposer un système de points pour les clients réguliers, donnant droit à des réductions sur leurs prochaines réservations.
+Publicité dans les Zones Touristiques :
+Mettre en place des partenariats avec des hôtels, aéroports, et centres touristiques au Maroc pour une visibilité maximale.
+Amélioration de l’Expérience Client :
+Offrir un service client réactif et multilingue pour rassurer les voyageurs internationaux.
+Recevoir et implémenter les retours utilisateurs pour améliorer constamment la plateforme.
+7. Identite visual
+Couleurs et Polices
+Landing page
