@@ -110,3 +110,17 @@ def extract_images_from_docx(docx_path, output_folder):
                 
     os.rmdir(temp_img_dir)  # Remove temporary directory
     print(f"[DOCX] Processed {count} images from '{os.path.basename(docx_path)}'")
+
+def extract_images_by_format(path, output_folder):
+    """
+    Extract images based on file format
+    """
+    ext = os.path.splitext(path)[-1].lower()
+    if ext == ".pdf":
+        return extract_images_from_pdf(path, output_folder)
+    elif ext == ".docx":
+        return extract_images_from_docx(path, output_folder)
+    elif ext == ".pptx":
+        return extract_images_from_pptx(path, output_folder)
+    else:
+        print(f"[Warning] Unsupported file type for image extraction: {ext}")

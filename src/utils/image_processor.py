@@ -1,8 +1,8 @@
 import os
 from typing import List
 from PIL import Image
-from src.utils.ocr import extract_text_from_image
-from src.utils.image_captioning import generate_caption
+from .ocr import extract_text_from_image
+from .image_captioning import generate_caption
 
 
 def process_images(image_paths: List[str]) -> List[str]:

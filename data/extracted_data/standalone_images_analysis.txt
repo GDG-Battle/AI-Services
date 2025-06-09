@@ -1,0 +1,112 @@
+[Standalone Image: architecture.png]
+[OCR]: hrandels data logics Handles dete
+Interact with database Presentation
+Dynamically Rendered
+
+—
+
+logic.
+
+MysQe
+My SQL
+[Caption]: a diagram showing the different types of the different types of the system
+
+--------------------------------------------------
+[Standalone Image: diagramme_cas_utilisation.png]
+[OCR]: ‘ten Seamepme
+[Caption]: a diagram of a computer system
+
+--------------------------------------------------
+[Standalone Image: diagramme_class.png]
+[OCR]: Pack wo
+a
+ri cm]
+: os
+Calendrier p —_ 4
+1 oe
+=
+- aaa
+Fournisseur | Naan
+“eg
+== Ea
+i od
+eet Bondel
+waffecter ‘Stock Devise
+ad ma
+a
+ae
+ed
+wa
+
+‘Bondecommande|
+[Caption]: a diagram of a tree
+
+--------------------------------------------------
+[Standalone Image: test_image1.jpg]
+[OCR]: [Paul] Rusty, what did you find? Shall we play fetch?
+
+=~ i. oa, ore — ee | Ol
+[Caption]: a dog with a stick in its mouth
+
+--------------------------------------------------
+[Standalone Image: test_image2.jpg]
+[OCR]: 
+[Caption]: a cat laying on a bed with a white sheet
+
+--------------------------------------------------
+[Standalone Image: architecture.png]
+[OCR]: hrandels data logics Handles dete
+Interact with database Presentation
+Dynamically Rendered
+
+—
+
+logic.
+
+MysQe
+My SQL
+[Caption]: a diagram showing the different types of the different types of the system
+
+--------------------------------------------------
+[Standalone Image: diagramme_cas_utilisation.png]
+[OCR]: ‘ten Seamepme
+[Caption]: a diagram of a computer system
+
+--------------------------------------------------
+[Standalone Image: diagramme_class.png]
+[OCR]: Pack wo
+a
+ri cm]
+: os
+Calendrier p —_ 4
+1 oe
+=
+- aaa
+Fournisseur | Naan
+“eg
+== Ea
+i od
+eet Bondel
+waffecter ‘Stock Devise
+ad ma
+a
+ae
+ed
+wa
+
+‘Bondecommande|
+[Caption]: a diagram of a tree
+
+--------------------------------------------------
+[Standalone Image: test_image1.jpg]
+[OCR]: [Paul] Rusty, what did you find? Shall we play fetch?
+
+=~ i. oa, ore — ee | Ol
+[Caption]: a dog with a stick in its mouth
+
+--------------------------------------------------
+[Standalone Image: test_image2.jpg]
+[OCR]: 
+[Caption]: a cat laying on a bed with a white sheet
+
+--------------------------------------------------

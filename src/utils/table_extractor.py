@@ -1,8 +1,9 @@
-def extract_tables_from_pdf(pdf_path, output_folder):
-    # Function to extract tables from a PDF document
-    import pdfplumber
-    import os
+import os
+import pdfplumber
+from docx import Document
+from pptx import Presentation
 
+def extract_tables_from_pdf(pdf_path, output_folder):
     os.makedirs(output_folder, exist_ok=True)
     all_tables_text = []
 
@@ -24,10 +25,6 @@ def extract_tables_from_pdf(pdf_path, output_folder):
             f.write("\n\n".join(all_tables_text))
 
 def extract_tables_from_docx(docx_path, output_folder):
-    # Function to extract tables from a DOCX document
-    from docx import Document
-    import os
-
     os.makedirs(output_folder, exist_ok=True)
     doc = Document(docx_path)
     tables_text = []
@@ -46,10 +43,6 @@ def extract_tables_from_docx(docx_path, output_folder):
             f.write("\n\n".join(tables_text))
 
 def extract_tables_from_pptx(pptx_path, output_folder):
-    # Function to extract tables from a PPTX document
-    from pptx import Presentation
-    import os
-
     os.makedirs(output_folder, exist_ok=True)
     prs = Presentation(pptx_path)
     tables_text = []
@@ -78,3 +71,17 @@ def extract_tables_from_pptx(pptx_path, output_folder):
         table_file_path = os.path.join(output_folder, "tables.txt")
         with open(table_file_path, 'w', encoding='utf-8') as f:
             f.write("\n\n".join(tables_text))
+        
+def extract_tables_by_format(path, output_folder):
+    """
+    Extract tables based on file format
+    """
+    ext = os.path.splitext(path)[-1].lower()
+    if ext == ".pdf":
+        return extract_tables_from_pdf(path, output_folder)
+    elif ext == ".docx":
+        return extract_tables_from_docx(path, output_folder)
+    elif ext == ".pptx":
+        return extract_tables_from_pptx(path, output_folder)
+    else:
+        print(f"[Warning] Unsupported file type for table extraction: {ext}")

@@ -269,6 +269,295 @@ Clear
 [Caption]: the settings menu in the settings menu
 
 --------------------------------------------------
+[PPTX Slide 18, Image 5]
+[OCR]: Q. Generative Al
+
+104 results
+
+COURSE
+
+Generative Al Explorer - Vertex Al
+
+1 Introductory
+
+The Generative Al Explorer - Vertex Quest is a
+collection of labs on how to use Generative Al on
+Google Cloud. Through the labs, you will learn about
+how to use the models in the Vertex Al PaLM API
+family, including text-bison, chat-bison, and...
+
+© 2 hours 45 minutes >
+
+LAB
+
+Explore Generative Al with the
+Gemini API in Vertex Al:
+Challenge Lab
+
+al. Intermediate
+
+This challenge lab tests your skills and knowledge
+from the labs in the Explore Generative Al with the
+Gemini API in Vertex Al course. You should be familiar
+with the content of the prior labs before attempting
+this lab.
+
+© 1 hour 30 minutes >
+[Caption]: the new font and font editor in the font editor app
+
+--------------------------------------------------
+[PPTX Slide 20, Image 4]
+[OCR]: Pretrained Model Custom Model
+Fine Tuning
+
+Custom Data
+
+(-
+[Caption]: a diagram of a database
+
+--------------------------------------------------
+[PPTX Slide 21, Image 2]
+[OCR]: 
+[Caption]: a blue and white pattern with a line of lines
+
+--------------------------------------------------
+[PPTX Slide 21, Image 3]
+[OCR]: @ Chroma
+[Caption]: the logo for chna
+
+--------------------------------------------------
+[PPTX Slide 21, Image 4]
+[OCR]: {3 Pinecone
+[Caption]: the logo for the pinecone
+
+--------------------------------------------------
+[PPTX Slide 21, Image 5]
+[OCR]: ORACLE
+Al Vector Search
+[Caption]: oracle vector search search
+
+--------------------------------------------------
+[PPTX Slide 21, Image 6]
+[OCR]: 
+[Caption]: the logo for the waverite company
+
+--------------------------------------------------
+[PPTX Slide 21, Image 7]
+[OCR]: PostgreSQL
+[Caption]: poste sql - poste sql - poste sql poste sql poste sql poste sql
+
+--------------------------------------------------
+[PPTX Slide 21, Image 8]
+[OCR]: @drant
+[Caption]: the logo for a company that sells products
+
+--------------------------------------------------
+[PPTX Slide 21, Image 9]
+[OCR]: SB redis
+[Caption]: redis logo
+
+--------------------------------------------------
+[PPTX Slide 21, Image 10]
+[OCR]: neodj
+[Caption]: neo4j - a new platform for the next generation of web development
+
+--------------------------------------------------
+[PPTX Slide 22, Image 20]
+[OCR]: Better Business outcomes
+
++
+
+Vector Database
+[Caption]: a diagram of a database
+
+--------------------------------------------------
+[PPTX Slide 24, Image 1]
+[OCR]: Document loader
+
+HTML
+
+JSON
+
+Text Splitter
+
+Embedding Function
+
+D> 10.2, 0.3, 2.1, 0.2,...]
+D> [1.2,4.7,0.1,0.1,...]
+D> 10.9, 1.2, 2.1, 1.1,..1
+D> 104,04, 1.5, 0.6,...]
+
+[
+[
+[
+[
+
+Vectorstore
+
+0.2, 0.3, 2.1, 0.2,...
+
+1.2, 4.7, 0.1,0.1,...
+0.9, 1.2, 2.1, 1.1
+
+0.4, 0.4, 1.5, 0.6,...
+
+g
+
+=
+[Caption]: a diagram showing the different types of the data
+
+--------------------------------------------------
+[PPTX Slide 25, Image 2]
+[OCR]: Ranked
+Documents
+
+Search
+Query
+--» y I (vector space or
+Query Processing : probabilistic)
+[Caption]: a diagram of a process
+
+--------------------------------------------------
+[PPTX Slide 26, Image 2]
+[OCR]: Response O
+° —__
+Pre-trained LLM Retrieval Model
+
+relevant
+
+i
+a
+i
+< ——
+if
+Hy
+3
+[Caption]: a diagram showing the different types of the network
+
+--------------------------------------------------
+[PPTX Slide 27, Image 2]
+[OCR]: 
+[Caption]: a person typing on a laptop with a speech bubble above it
+
+--------------------------------------------------
+[PPTX Slide 28, Image 4]
+[OCR]: DO'YOU HAVE A..:
+[Caption]: a woman talking to a child who is a question
+
+--------------------------------------------------
+[PPTX Slide 29, Image 4]
+[OCR]: any fran
+that handle.
+
+oll of this
+
+=
+uw
+=
+
+—
+
+a a
+
+= lam once again asking
+[Caption]: an older man with glasses and a jacket, with the capt that reads, is the answer of the
+
+--------------------------------------------------
+[PPTX Slide 30, Image 15]
+[OCR]: Retrieval
+
+Document Beocument Embedeli Vector
+loaders transformers model stores
+Re
+LangChain.clart
+Language ts
+models, 3
+
+Output i,
+[Caption]: a colorful diagram with the words ' laugh ' and ' laugh '
+
+--------------------------------------------------
+[PPTX Slide 34, Image 1]
+[OCR]: Thank you.
+[Caption]: thank you
+
+--------------------------------------------------
+[PPTX Slide 34, Image 2]
+[OCR]: 
+[Caption]: a man in a suit and tie standing in an office
+
+--------------------------------------------------
+[PPTX Slide 35, Image 2]
+[OCR]: "What's the policy?”
+
+Chat History
+
+"What are my
+corporate benefits?”
+
+Enhanced
+Prompt
+
+Embedding
+
+Model
+
+Embedding
+
+Similarity Search
+
+Vector ID
+Matches
+
+Augmented
+
+Prompt LLM
+
+Private content
+
+Fetch docs for matching IDs
+
+=
+
+HIGHLY
+ACCURATE
+RESPONSE
+
+Relational Database
+[Caption]: a diagram showing the process of the process
+
+--------------------------------------------------
+[PPTX Slide 41, Image 26]
+[OCR]: 
+[Caption]: a blue and orange star with a black background
+
+--------------------------------------------------
+[PPTX Slide 41, Image 39]
+[OCR]: Gemma
+[Caption]: the german logo
+
+--------------------------------------------------
+[PPTX Slide 41, Image 44]
+[OCR]: 
+[Caption]: adobe logo
+
+--------------------------------------------------
+[PPTX Slide 41, Image 47]
+[OCR]: 
+[Caption]: a yellow em em em em em em em em em em em em em em em em em em
+
+--------------------------------------------------
+[PPTX Slide 41, Image 48]
+[OCR]: al
+ie ae
+[Caption]: the logo for meta
+
+--------------------------------------------------
+[PPTX Slide 41, Image 49]
+[OCR]: 
+[Caption]: a black background with a red and yellow logo
+
+--------------------------------------------------
 [PPTX Slide 1, Image 1]
 [OCR]: Google Cloud
 Innovators

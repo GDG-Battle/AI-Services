@@ -3,7 +3,8 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.services.image_processor import process_images
+from src.utils.image_processor import process_images,process_image_and_save
+from PIL import Image
 
 def collect_image_paths(directory: str, extensions={".jpg", ".jpeg", ".png", ".bmp"}):
     """
@@ -16,15 +17,20 @@ def collect_image_paths(directory: str, extensions={".jpg", ".jpeg", ".png", ".b
     return image_paths
 
 if __name__ == "__main__":
-    # Use os.path.join to create platform-independent path
-    # Create path relative to the project root
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    output_dir = os.path.join(project_root, "data", "extracted_data")
+    output_file = os.path.join(output_dir, "image_analysis.txt")
     image_dir = os.path.join(project_root, "data", "images")
     image_paths = collect_image_paths(image_dir)
 
     print(f"Found {len(image_paths)} images.")
-    results = process_images(image_paths)
-
-    for idx, result in enumerate(results):
-        print(f"\n--- Result for Image {idx+1} ---")
-        print(result)
+    
+    os.makedirs(output_dir, exist_ok=True)
+    
+    for idx, img_path in enumerate(image_paths):
+        try:
+            with Image.open(img_path).convert("RGB") as img:
+                source_info = f"[Standalone Image: {os.path.basename(img_path)}]"
+                process_image_and_save(img, output_file, source_info)
+        except Exception as e:
+            print(f"Error processing image {img_path}: {e}")

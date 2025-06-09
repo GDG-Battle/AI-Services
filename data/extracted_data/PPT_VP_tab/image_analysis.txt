@@ -29,3 +29,34 @@ Yearl Year 2 Year 3
 [Caption]: a bar chart with the same amount of a person
 
 --------------------------------------------------
+[PPTX Slide 5, Image 3]
+[OCR]: @ Revenue (USD Billion)
+$1,000
+
+$800
+
+$600
+$400
+$0
+
+2022. 2023 2024 #%2025 2026 2027 2028 ##=#2029 2030 2031 2032
+[Caption]: a graph showing the number of crypts in the us
+
+--------------------------------------------------
+[PPTX Slide 6, Image 2]
+[OCR]: @ Expense @ Revenue
+
+$20,000
+
+$15,000
+
+$10,000
+
+$5,000
+
+$0
+
+Yearl Year 2 Year 3
+[Caption]: a bar chart with the same amount of a person
+
+--------------------------------------------------
