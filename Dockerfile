@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y curl unzip \
     && pip install --no-cache-dir -r requirements.txt \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+ENV DENO_INSTALL="/root/.deno"
+ENV PATH="$DENO_INSTALL/bin:$PATH"
+
 COPY . .
 
 EXPOSE 8000
