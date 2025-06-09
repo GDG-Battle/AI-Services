@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 from .agents.eval_exo_agent import evaluate_and_feedback
 from .services.generate_code_or_exo import generate_lab
+import os
 load_dotenv()
 
 app = Flask(__name__)
@@ -79,6 +80,8 @@ def evaluate_exercise():
         return jsonify({"error": str(e)}), 400
     
 
-# run app
+# run app for production
 if __name__ == '__main__':
-    app.run(debug=True)
+    HOST = os.getenv('HOST', '0.0.0.0')
+    PORT = int(os.getenv('PORT', 8000))
+    app.run(host=HOST, port=PORT)
