@@ -1,7 +1,17 @@
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
-from sentence_transformers import SentenceTransformer
+from langchain_qdrant import QdrantVectorStore  # Add this import
+from langchain_nvidia_ai_endpoints import NVIDIAEmbeddings
 import uuid
+import os
+import dotenv
+from datetime import datetime
+
+# Load environment variables
+dotenv.load_dotenv()
+
+QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
+EMBEDDING_MODEL_NAME = "nv-embed-v1"  # Update to match working example
 
 def generate_chunk_id(base_id: str, chunk_index: int) -> str:
     """Generate a deterministic UUID for a document chunk based on base ID and chunk index"""
@@ -13,49 +23,68 @@ def generate_chunk_id(base_id: str, chunk_index: int) -> str:
 class VectorStore:
     def __init__(self, collection_name="document_store"):
         self.collection_name = collection_name
-        # Initialize Qdrant client (local instance)
-        self.client = QdrantClient("localhost", port=6333)
-        # Initialize sentence transformer model
-        self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
-        self._ensure_collection()
-
-    def _ensure_collection(self):
-        """Create collection if it doesn't exist"""
-        try:
-            self.client.get_collection(self.collection_name)
-        except Exception:
-            self.client.create_collection(
-                collection_name=self.collection_name,
-                vectors_config=models.VectorParams(
-                    size=384,  # vector size for all-MiniLM-L6-v2
-                    distance=models.Distance.COSINE
-                )
-            )
-
-    def store_document_data(self, content_type: str, source_info: str, content: str, metadata: dict = None):
-        """Store document data in vector database"""
-        # Generate embedding for the content
-        vector = self.encoder.encode(content).tolist()
         
-        # Prepare payload
-        payload = {
-            "content_type": content_type,
-            "source_info": source_info,
-            "content": content,
-            **(metadata or {})
-        }
-
-        # Store in Qdrant
-        self.client.upsert(
-            collection_name=self.collection_name,
-            points=[
-                models.PointStruct(
-                    id=str(uuid.uuid4()),
-                    vector=vector,
-                    payload=payload
+        try:
+            # Initialize NVIDIA embeddings
+            self.encoder = NVIDIAEmbeddings(
+                model_name=EMBEDDING_MODEL_NAME,
+                nvidia_api_key=os.getenv("NVIDIA_API_KEY")
+            )
+            
+            # Initialize QdrantVectorStore instead of direct client
+            self.vectorstore = QdrantVectorStore.from_existing_collection(
+                collection_name=collection_name,
+                embedding=self.encoder,
+                url=QDRANT_URL,
+                prefer_grpc=True
+            )
+            
+        except Exception as e:
+            # Try creating new collection if it doesn't exist
+            self.vectorstore = QdrantVectorStore.from_documents(
+                documents=[],  # Start with empty collection
+                embedding=self.encoder,
+                collection_name=collection_name,
+                url=QDRANT_URL,
+                prefer_grpc=True
+            )
+            
+    def store_document_content(self, doc_id: str, content: str, content_type: str, 
+                             source_info: str, metadata: dict):
+        """Store document content in vector store with chunking"""
+        chunks = self._split_content(content)
+        
+        for i, chunk in enumerate(chunks):
+            try:
+                # Use add_texts instead of direct client operations
+                self.vectorstore.add_texts(
+                    texts=[chunk],
+                    metadatas=[{
+                        "doc_id": doc_id,
+                        "chunk_id": generate_chunk_id(doc_id, i),
+                        "content_type": content_type,
+                        "source": source_info,
+                        "chunk_index": i,
+                        "total_chunks": len(chunks),
+                        **metadata
+                    }]
                 )
-            ]
-        )
+            except Exception as e:
+                print(f"❌ Error storing chunk {i+1}: {str(e)}")
+
+    def similarity_search(self, query: str, k: int = 3):
+        """Search for similar documents in the vector store"""
+        try:
+            # Use QdrantVectorStore's similarity_search
+            results = self.vectorstore.similarity_search(
+                query,
+                k=k,
+                include_metadata=True
+            )
+            return results
+        except Exception as e:
+            print(f"❌ Error during similarity search: {str(e)}")
+            return []
 
     def chunk_text(self, text: str, max_chunk_size: int = 1000) -> list:
         """Split text into semantically meaningful chunks"""
@@ -160,66 +189,6 @@ class VectorStore:
         return self.chunk_text(content)
 
     def _get_embedding(self, text: str) -> list:
-        """Get embedding vector for text using sentence transformer"""
-        return self.encoder.encode(text).tolist()
-
-    def store_document_content(self, doc_id: str, content: str, content_type: str, 
-                             source_info: str, metadata: dict):
-        """Store document content in vector store with chunking"""
-        chunks = self._split_content(content)
-        
-        for i, chunk in enumerate(chunks):
-            chunk_id = generate_chunk_id(doc_id, i)
-            try:
-                # Store chunk with valid UUID
-                self.client.upsert(  # Changed from self.qdrant to self.client
-                    collection_name=self.collection_name,
-                    points=[
-                        models.PointStruct(  # Added models. prefix
-                            id=chunk_id,
-                            vector=self._get_embedding(chunk),
-                            payload={
-                                "text": chunk,
-                                "content_type": content_type,
-                                "source": source_info,
-                                "chunk_index": i,
-                                "total_chunks": len(chunks),
-                                **metadata
-                            }
-                        )
-                    ]
-                )
-            except Exception as e:
-                print(f"❌ Error storing chunk {i+1}: {str(e)}")
-                
-    def similarity_search(self, query: str, k: int = 3):
-        """
-        Search for similar documents in the vector store
-        """
-        query_vector = self.encoder.encode(query).tolist()
-        
-        search_results = self.client.search(
-            collection_name=self.collection_name,
-            query_vector=query_vector,
-            limit=k,
-            search_params=models.SearchParams(
-                exact=False,
-                hnsw_ef=128
-            )
-        )
-        
-        documents = []
-        for result in search_results:
-            doc = {
-                'page_content': result.payload.get('text', ''),  # Changed from 'content' to 'text'
-                'metadata': {
-                    'source_info': result.payload.get('source', ''),  # Changed from 'source_info' to 'source'
-                    'content_type': result.payload.get('content_type', ''),
-                    'score': result.score,
-                    **{k:v for k,v in result.payload.items() 
-                       if k not in ['text', 'source', 'content_type']}  # Updated excluded keys
-                }
-            }
-            documents.append(doc)
-        
-        return documents
+        """Get embedding vector for text using NVIDIA embeddings"""
+        embeddings = self.encoder.embed_query(text)
+        return embeddings
