@@ -2,15 +2,30 @@
 # 1. for generating qcm or code
 # 2. for evaluating user code and providing feedback
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
+from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 from .agents.eval_exo_agent import evaluate_and_feedback
 from .services.generate_code_or_exo import generate_lab
 from .agents.router_agent import route_query
+from .services.documents_pipeline import add_new_documents
+from .utils.file_helpers import allowed_file, save_uploaded_files
 import os
+import time
 load_dotenv()
 
 app = Flask(__name__)
+
+# File upload configuration
+UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'uploads')
+PROCESSED_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'extracted_data')
+
+# Create upload folders if they don't exist
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(PROCESSED_FOLDER, exist_ok=True)
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 30 * 1024 * 1024  # 30MB max-limit
 
 # set up langsmith tracing for all the invocations
 
@@ -107,6 +122,48 @@ def ai_assistant():
         }), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 400
+
+@app.route('/process-documents', methods=['POST'])
+def process_documents():
+    if 'files' not in request.files:
+        return jsonify({"error": "No files provided"}), 400
+        
+    files = request.files.getlist('files')
+    if not files or all(file.filename == '' for file in files):
+        return jsonify({"error": "No selected files"}), 400
+
+    try:
+        start_time = time.time()
+        
+        # Save uploaded files using imported helper
+        saved_files = save_uploaded_files(files, app.config['UPLOAD_FOLDER'])
+        if not saved_files:
+            return jsonify({"error": "No valid files uploaded"}), 400
+
+        # Process the documents
+        results = add_new_documents(
+            input_files=saved_files,
+            output_dir=PROCESSED_FOLDER
+        )
+
+        # Clean up uploaded files
+        for filepath in saved_files:
+            try:
+                os.remove(filepath)
+            except Exception as e:
+                print(f"Error removing temporary file {filepath}: {e}")
+
+        # Add total processing time
+        total_time = time.time() - start_time
+        
+        return jsonify({
+            "message": "Documents processed successfully",
+            "results": results,
+            "total_processing_time_seconds": round(total_time, 2)
+        }), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # run app for production
 if __name__ == '__main__':

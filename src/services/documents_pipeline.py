@@ -9,6 +9,7 @@ from src.utils.image_processor import process_images, process_image_and_save
 import uuid
 from datetime import datetime
 import logging
+import time
 
 import warnings
 
@@ -161,10 +162,16 @@ def process_single_document(file_path, doc_output_dir, doc_id, doc_metadata, vec
 def add_new_documents(input_files: list, output_dir: str) -> dict:
     """Process a list of new documents"""
     vector_store = VectorStore()
-    results = {"success": [], "failed": []}
+    results = {
+        "success": [], 
+        "failed": [],
+        "timing": []  # Add timing information
+    }
     
     for file_path in input_files:
         filename = os.path.basename(file_path)
+        start_time = time.time()
+        
         try:
             if is_valid_document(filename):
                 doc_metadata = create_metadata(file_path, "document")
@@ -179,9 +186,22 @@ def add_new_documents(input_files: list, output_dir: str) -> dict:
             elif is_valid_image(filename):
                 process_single_image(file_path, output_dir, vector_store)
                 results["success"].append(filename)
+            
+            # Record processing time
+            processing_time = time.time() - start_time
+            results["timing"].append({
+                "file": filename,
+                "processing_time_seconds": round(processing_time, 2)
+            })
                 
         except Exception as e:
-            results["failed"].append({"file": filename, "error": str(e)})
+            processing_time = time.time() - start_time
+            results["failed"].append({
+                "file": filename, 
+                "error": str(e),
+                "processing_time_seconds": round(processing_time, 2)
+            })
+            logger.error(f"Error processing {filename} ({processing_time:.2f}s): {e}")
     
     return results
 
