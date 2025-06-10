@@ -1,9 +1,0 @@
-[PPTX Slide 38 - Table 2]
-Modality | Size | Use Case
-Are you working with text? Code? Image? Video? 
-
-What languages will you be prompting the model with? | Is your use case real time? Or can you cache results after processing in batch? | Do you need a model with advanced reasoning capabilities (good at Chain-of-Thought, etc)? Or is your task more straightforward (summarization, basic Q&A)
-
-[PPTX Slide 39 - Table 2]
-Throughput | Latency | Size & Budget
-What volume does your use case need to support? How many users on your application concurrently? | How fast does model inference need to be? Is your use case real time (chat bot, agent, etc) | How big is your model? Generally, small models (< 10B parameters) can run on an L4 GPU ($) while larger models might need an A100 or TPUs ($$$)
