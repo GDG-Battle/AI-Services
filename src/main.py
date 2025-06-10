@@ -12,6 +12,14 @@ load_dotenv()
 
 app = Flask(__name__)
 
+# set up langsmith tracing for all the invocations
+
+if 'LANGSMITH_API_KEY' in os.environ:
+    os.environ['LANGSMITH_PROJECT'] = os.getenv('LANGSMITH_PROJECT', 'code-exercise-generation')
+    os.environ['LANGSMITH_API_KEY'] = os.getenv('LANGSMITH_API_KEY', 'your-api-key')
+    os.environ['LANGSMITH_TRACING_V2'] = os.getenv('LANGSMITH_TRACING_V2', 'true')
+
+
 @app.route('/')
 def index():
     return "Welcome to the Code and Exercise Generation API!"

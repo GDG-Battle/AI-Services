@@ -34,7 +34,7 @@ def qcm_pipeline(user_query: str, difficulty: str, context: str, number_of_quest
     human_msg = HumanMessage(content=f"Generate a question about: {user_query}")
 
     # No retrieval tool needed here, just pass the LLM
-    agent = create_react_agent(model=llm, tools=[], debug=True)
+    agent = create_react_agent(model=llm, tools=[], debug=False)
 
     result = agent.invoke({"messages": [sys_msg, human_msg]})
 

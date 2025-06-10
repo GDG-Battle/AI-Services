@@ -37,7 +37,7 @@ def coding_exo_pipeline(user_query, difficulty, context):
 
     human_msg = HumanMessage(content=f"Generate a coding exercise about: {user_query}")
     tools = [verify_code]
-    agent = create_react_agent(model=llm, tools=tools, debug=True)
+    agent = create_react_agent(model=llm, tools=tools, debug=False)
     for _ in range(5):
         result = agent.invoke({"messages": [sys_msg, human_msg]})
         try:
