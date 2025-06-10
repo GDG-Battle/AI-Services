@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 from .agents.eval_exo_agent import evaluate_and_feedback
 from .services.generate_code_or_exo import generate_lab
+from .agents.router_agent import route_query
 import os
 load_dotenv()
 
@@ -80,8 +81,25 @@ def evaluate_exercise():
         return jsonify({"error": str(e)}), 400
     
 
+# Remove the /mentor and /hint routes
+# Add the new unified endpoint:
+@app.route('/aiassistant', methods=['POST'])
+def ai_assistant():
+    data = request.json
+    query = data.get("query", "")
+    
+    if not query:
+        return jsonify({"error": "Query is required"}), 400
+    
+    try:
+        result = route_query(query)
+        return jsonify({
+            "type": result["type"],
+            "response": result["response"]
+        }), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
 # run app for production
 if __name__ == '__main__':
-    HOST = os.getenv('HOST', '0.0.0.0')
-    PORT = int(os.getenv('PORT', 8000))
-    app.run(host=HOST, port=PORT)
+    app.run( debug=True)

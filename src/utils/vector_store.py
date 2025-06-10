@@ -191,3 +191,35 @@ class VectorStore:
                 )
             except Exception as e:
                 print(f"❌ Error storing chunk {i+1}: {str(e)}")
+                
+    def similarity_search(self, query: str, k: int = 3):
+        """
+        Search for similar documents in the vector store
+        """
+        query_vector = self.encoder.encode(query).tolist()
+        
+        search_results = self.client.search(
+            collection_name=self.collection_name,
+            query_vector=query_vector,
+            limit=k,
+            search_params=models.SearchParams(
+                exact=False,
+                hnsw_ef=128
+            )
+        )
+        
+        documents = []
+        for result in search_results:
+            doc = {
+                'page_content': result.payload.get('text', ''),  # Changed from 'content' to 'text'
+                'metadata': {
+                    'source_info': result.payload.get('source', ''),  # Changed from 'source_info' to 'source'
+                    'content_type': result.payload.get('content_type', ''),
+                    'score': result.score,
+                    **{k:v for k,v in result.payload.items() 
+                       if k not in ['text', 'source', 'content_type']}  # Updated excluded keys
+                }
+            }
+            documents.append(doc)
+        
+        return documents
