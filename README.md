@@ -11,3 +11,10 @@
 3. Add the Tesseract installation directory to your system `PATH` environment variable.
 
 ## Run project
+
+1. Make sure your `.env` file is set up (e.g. `QDRANT_URL=http://qdrant:6333`).
+
+2. Build and start the containers in detached mode:
+
+```bash
+docker compose up -d
