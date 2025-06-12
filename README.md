@@ -9,3 +9,5 @@
 1. Download and install Tesseract OCR from [UB Mannheim Tesseract releases](https://github.com/UB-Mannheim/tesseract/wiki).
 2. During installation, note the installation path (e.g., `C:\Program Files\Tesseract-OCR`).
 3. Add the Tesseract installation directory to your system `PATH` environment variable.
+
+## Run project
