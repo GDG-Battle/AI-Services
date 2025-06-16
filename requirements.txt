@@ -1,15 +1,26 @@
 ipykernel                # Jupyter/IPython kernel support
 python-dotenv            # Load environment variables from .env files
+flask                    # Web framework for the API
+flask-restful            # RESTful API extensions for Flask
+py-eureka-client         # Eureka client for Python Flask applications
+requests                 # HTTP library for making API calls
+
+# AI and ML dependencies
 langchain-core           # Core components for building language model applications
 langchain-community      # Community-contributed integrations for LangChain
 langgraph                # Framework for building language model workflows/graphs
-unstructured             # Parsing and processing unstructured documents
-python-magic             # File type identification using libmagic
-python-pptx              # Read/write PowerPoint (.pptx) files
 langchain-qdrant         # Qdrant vector database integration for LangChain
 langchain-nvidia-ai-endpoints # NVIDIA AI endpoints integration for LangChain
 langchain-sandbox        # Sandbox environment for LangChain applications to run code safely
-flask-restful 
+
+# Document processing
+unstructured             # Parsing and processing unstructured documents
+python-magic             # File type identification using libmagic
+python-pptx              # Read/write PowerPoint (.pptx) files
+python-docx              # Word document processing
+PyMuPDF                  # PDF processing
+pdfplumber               # PDF text extraction
+docx2txt                 # DOCX text extraction
 
 # AI assistant dependencies
 

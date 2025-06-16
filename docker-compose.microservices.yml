@@ -1,0 +1,42 @@
+# Docker Compose for AI Service integrated with microservices
+version: '3.8'
+
+services:
+  ai-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-service
+    environment:
+      - SERVICE_NAME=ai-service
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8080/eureka
+      - CONFIG_SERVICE_URL=http://config-service:8081
+      - FLASK_ENV=production
+      - FLASK_DEBUG=false
+    ports:
+      - "8000:8000"
+    depends_on:
+      - qdrant
+      - discovery-service
+      - config-service
+    networks:
+      - gdg-battle-network
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant-ai
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - gdg-battle-network
+
+networks:
+  gdg-battle-network:
+    external: true
+
+volumes:
+  qdrant_data:

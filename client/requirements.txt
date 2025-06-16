@@ -1,0 +1,4 @@
+# Requirements for AI Service Python Client
+requests>=2.31.0
+dataclasses; python_version<"3.7"  # For older Python versions
+typing-extensions>=4.0.0  # For better typing support

@@ -10,8 +10,12 @@ from .services.generate_code_or_exo import generate_lab
 from .agents.router_agent import route_query
 from .services.documents_pipeline import add_new_documents
 from .utils.file_helpers import allowed_file, save_uploaded_files
+from .eureka_config import register_with_eureka, unregister_from_eureka
 import os
 import time
+import atexit
+import signal
+import sys
 load_dotenv()
 
 app = Flask(__name__)
@@ -38,6 +42,40 @@ if 'LANGSMITH_API_KEY' in os.environ:
 @app.route('/')
 def index():
     return "Welcome to the Code and Exercise Generation API!"
+
+@app.route('/health')
+def health_check():
+    """Health check endpoint for Eureka"""
+    return jsonify({
+        "status": "UP",
+        "application": {
+            "name": "ai-service",
+            "version": "1.0.0"
+        },
+        "dependencies": {
+            "flask": "OK",
+            "ai_services": "OK"
+        }
+    }), 200
+
+@app.route('/actuator/info')
+def actuator_info():
+    """Actuator info endpoint for service information"""
+    return jsonify({
+        "app": {
+            "name": "ai-service",
+            "description": "AI service for code generation, evaluation, and assistance",
+            "version": "1.0.0",
+            "framework": "Flask",
+            "language": "Python"
+        },
+        "endpoints": [
+            {"path": "/generate", "method": "POST", "description": "Generate code exercises or QCM"},
+            {"path": "/evaluate", "method": "POST", "description": "Evaluate user code submissions"},
+            {"path": "/aiassistant", "method": "POST", "description": "AI assistant for queries"},
+            {"path": "/process-documents", "method": "POST", "description": "Process uploaded documents"}
+        ]
+    }), 200
 
 # a json to test the API
 # {
@@ -169,4 +207,24 @@ def process_documents():
 if __name__ == '__main__':
     HOST = os.getenv('HOST', '0.0.0.0')
     PORT = int(os.getenv('PORT', 8000))
+    
+    # Register shutdown handlers
+    def signal_handler(sig, frame):
+        print('Shutting down AI service...')
+        unregister_from_eureka()
+        sys.exit(0)
+    
+    def cleanup():
+        unregister_from_eureka()
+    
+    # Register signal handlers for graceful shutdown
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
+    atexit.register(cleanup)
+    
+    # Register with Eureka
+    eureka_registered = register_with_eureka()
+    if not eureka_registered:
+        print("Warning: Failed to register with Eureka. Service will run without discovery.")
+    
     app.run(host=HOST, port=PORT)
